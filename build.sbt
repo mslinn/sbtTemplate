@@ -30,15 +30,15 @@ libraryDependencies ++= Seq(
 )
 
 publishTo <<= (version) { version: String =>
-   val scalasbt = "http://repo.scala-sbt.org/scalasbt/"
+   val scalasbt = "https://bitbucket.org/mslinn/maven-repo/raw/master/"
    val (name, url) = if (version.contains("-SNAPSHOT"))
-                       ("sbt-plugin-snapshots", scalasbt+"sbt-plugin-snapshots")
+                       ("snapshots", scalasbt+"snapshots")
                      else
-                       ("sbt-plugin-releases", scalasbt+"sbt-plugin-releases")
-   Some(Resolver.url(name, new URL(url))(Resolver.ivyStylePatterns))
+                       ("releases", scalasbt+"releases")
+   Some(Resolver.url(name, new URL(url)))
 }
 
-publishMavenStyle := false
+publishMavenStyle := true
 
 //logLevel := Level.Error
 
