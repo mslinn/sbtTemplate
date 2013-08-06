@@ -44,7 +44,7 @@ publishMavenStyle := false
 
 // define the statements initially evaluated when entering 'console', 'console-quick', or 'console-project'
 initialCommands := """
-  """
+                     |""".stripMargin
 
 // Only show warnings and errors on the screen for compilations.
 // This applies to both test:compile and compile and is Info by default
