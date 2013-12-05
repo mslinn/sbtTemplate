@@ -1,3 +1,5 @@
+// If you have JDK 6 and not JDK 7 then replace all three instances of the number 7 to the number 6
+
 organization := "com.micronautics"
 
 name := "changeMe"
@@ -6,7 +8,7 @@ crossPaths := false
 
 version := "0.1.0-SNAPSHOT"
 
-scalaVersion := "2.10.2"
+scalaVersion := "2.10.3"
 
 scalacOptions ++= Seq("-deprecation", "-encoding", "UTF-8", "-feature", "-target:jvm-1.7", "-unchecked",
     "-Ywarn-adapted-args", "-Ywarn-value-discard", "-Xlint")
@@ -25,8 +27,8 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "org.scalatest"           %% "scalatest"           % "2.0.M6-SNAP16" % "test" withSources(),
-  "com.github.nscala-time"  %% "nscala-time"         % "0.2.0" withSources()
+  "org.scalatest"           %% "scalatest"     % "2.0.M6-SNAP16" % "test" withSources(),
+  "com.github.nscala-time"  %% "nscala-time"   % "0.2.0" withSources()
 )
 
 publishTo <<= (version) { version: String =>
