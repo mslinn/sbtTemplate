@@ -4,8 +4,6 @@ organization := "com.micronautics"
 
 name := "changeMe"
 
-crossPaths := false
-
 version := "0.1.0-SNAPSHOT"
 
 scalaVersion := "2.10.3"
@@ -39,4 +37,4 @@ initialCommands := """
 
 // Only show warnings and errors on the screen for compilations.
 // This applies to both test:compile and compile and is Info by default
-//logLevel in compile := Level.Warn
+logLevel in compile := Level.Warn
