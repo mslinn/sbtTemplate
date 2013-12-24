@@ -27,8 +27,8 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-//  "org.scalatest"           %% "scalatest"     % "2.0.M6-SNAP16" % "test" withSources(),
-//  "com.github.nscala-time"  %% "nscala-time"   % "0.2.0" withSources()
+//  "org.scalatest"           %% "scalatest"     % "2.0.M6-SNAP16" % "test" withSources,
+//  "com.github.nscala-time"  %% "nscala-time"   % "0.2.0" withSources
 )
 
 publishTo <<= (version) { version: String =>
