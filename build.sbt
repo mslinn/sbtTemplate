@@ -27,22 +27,11 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-//  "org.scalatest"           %% "scalatest"     % "2.0.M6-SNAP16" % "test" withSources,
-//  "com.github.nscala-time"  %% "nscala-time"   % "0.2.0" withSources
+//  "org.scalatest"           %% "scalatest"     % "2.0" % "test" withSources,
+//  "com.github.nscala-time"  %% "nscala-time"   % "0.6.0" withSources
 )
 
-publishTo <<= (version) { version: String =>
-   val scalasbt = "http://repo.scala-sbt.org/scalasbt/"
-   val (name, url) = if (version.contains("-SNAPSHOT"))
-                       ("sbt-plugin-snapshots", scalasbt+"sbt-plugin-snapshots")
-                     else
-                       ("sbt-plugin-releases", scalasbt+"sbt-plugin-releases")
-   Some(Resolver.url(name, new URL(url))(Resolver.ivyStylePatterns))
-}
-
-publishMavenStyle := false
-
-//logLevel := Level.Error
+logLevel := Level.Warn
 
 // define the statements initially evaluated when entering 'console', 'console-quick', or 'console-project'
 initialCommands := """
