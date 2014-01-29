@@ -39,4 +39,6 @@ initialCommands := """
 // This applies to both test:compile and compile and is Info by default
 logLevel in compile := Level.Warn
 
+cancelable := true
+
 sublimeTransitive := true
