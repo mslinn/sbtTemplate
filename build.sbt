@@ -4,9 +4,9 @@ organization := "com.micronautics"
 
 name := "changeMe"
 
-version := "0.1.0-SNAPSHOT"
+version := "0.1.1-SNAPSHOT"
 
-scalaVersion := "2.11.1"
+scalaVersion := "2.11.2"
 
 scalacOptions ++= Seq("-deprecation", "-encoding", "UTF-8", "-feature", "-target:jvm-1.7", "-unchecked",
     "-Ywarn-adapted-args", "-Ywarn-value-discard", "-Xlint")
@@ -25,8 +25,8 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-//  "org.scalatest"           %% "scalatest"     % "2.0" % "test" withSources,
-//  "com.github.nscala-time"  %% "nscala-time"   % "0.6.0" withSources
+//  "org.scalatest"           %% "scalatest"     % "2.2.0" % "test" withSources(),
+//  "com.github.nscala-time"  %% "nscala-time"   % "1.2.0" withSources()
 )
 
 logLevel := Level.Warn
