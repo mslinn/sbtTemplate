@@ -31,13 +31,16 @@ libraryDependencies ++= Seq(
 
 logLevel := Level.Warn
 
-// define the statements initially evaluated when entering 'console', 'console-quick', or 'console-project'
-initialCommands := """
-                     |""".stripMargin
-
 // Only show warnings and errors on the screen for compilations.
 // This applies to both test:compile and compile and is Info by default
 logLevel in compile := Level.Warn
+
+// Level.INFO is needed to see detailed output when running tests
+logLevel in test := Level.Info
+
+// define the statements initially evaluated when entering 'console', 'console-quick', or 'console-project'
+initialCommands := """
+                     |""".stripMargin
 
 cancelable := true
 
