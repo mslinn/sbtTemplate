@@ -25,7 +25,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-//  "org.scalatest"           %% "scalatest"     % "2.2.0" % "test" withSources(),
+//  "org.scalatest"           %% "scalatest"     % "2.2.3" % "test" withSources(),
 //  "com.github.nscala-time"  %% "nscala-time"   % "1.2.0" withSources()
 )
 
@@ -38,8 +38,8 @@ logLevel in compile := Level.Warn
 // Level.INFO is needed to see detailed output when running tests
 logLevel in test := Level.Info
 
-// define the statements initially evaluated when entering 'console', 'console-quick', or 'console-project'
-initialCommands := """
+// define the statements initially evaluated when entering 'console', 'console-quick', but not 'console-project'
+initialCommands in console := """
                      |""".stripMargin
 
 cancelable := true
