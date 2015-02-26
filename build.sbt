@@ -2,7 +2,7 @@
 
 organization := "com.micronautics"
 
-name := "changeMe"
+name := "change-me"
 
 version := "0.1.2-SNAPSHOT"
 
