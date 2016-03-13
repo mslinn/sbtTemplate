@@ -21,7 +21,7 @@ scalacOptions in (Compile, doc) <++= baseDirectory.map {
 javacOptions ++= Seq("-Xlint:deprecation", "-Xlint:unchecked", "-source", "1.7", "-target", "1.7", "-g:vars")
 
 resolvers ++= Seq(
-  "Typesafe Releases"   at "http://repo.typesafe.com/typesafe/releases"
+  "Lightbend Releases" at "http://repo.typesafe.com/typesafe/releases"
 )
 
 libraryDependencies ++= Seq(
