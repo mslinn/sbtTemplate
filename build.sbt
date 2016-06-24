@@ -4,7 +4,7 @@ organization := "com.micronautics"
 
 name := "change-me"
 
-version := "0.1.3"
+version := "0.1.4"
 
 scalaVersion := "2.11.8"
 
@@ -25,8 +25,9 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-//  "org.scalatest"           %% "scalatest"     % "2.2.3" % "test" withSources(),
-//  "com.github.nscala-time"  %% "nscala-time"   % "1.8.0" withSources()
+  //"com.github.nscala-time"  %% "nscala-time"   % "1.8.0" withSources(),
+  "org.scalatest"     %% "scalatest"   % "2.2.6" % "test" withSources(),
+  "junit"             %  "junit"       % "4.12"  % "test"
 )
 
 logLevel := Level.Warn
@@ -40,7 +41,7 @@ logLevel in test := Level.Info
 
 // define the statements initially evaluated when entering 'console', 'console-quick', but not 'console-project'
 initialCommands in console := """
-                     |""".stripMargin
+                                |""".stripMargin
 
 cancelable := true
 
