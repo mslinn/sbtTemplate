@@ -1,15 +1,28 @@
-// If you have JDK 6 and not JDK 7 then replace all three instances of the number 7 to the number 6
+// If you use JDK 6 and not JDK 7 then replace all three instances of the number 7 to the number 6
+// If you use JDK 8 and not JDK 7 then replace all three instances of the number 7 to the number 8
 
 organization := "com.micronautics"
 
 name := "change-me"
 
-version := "0.1.4"
+version := "0.1.5"
 
 scalaVersion := "2.11.8"
 
-scalacOptions ++= Seq("-deprecation", "-encoding", "UTF-8", "-feature", "-target:jvm-1.7", "-unchecked",
-    "-Ywarn-adapted-args", "-Ywarn-value-discard", "-Xlint")
+scalacOptions ++= Seq(
+  "-deprecation", 
+  "-encoding", "UTF-8", 
+  "-feature", 
+  "-target:jvm-1.7", 
+  "-unchecked",
+  "-Ywarn-adapted-args",
+  "-Ywarn-dead-code",
+  "-Ywarn-numeric-widen",
+  "-Ywarn-unused",
+  "-Ywarn-value-discard",
+  "-Xfuture",
+  "-Xlint"
+)
 
 scalacOptions in (Compile, doc) <++= baseDirectory.map {
   (bd: File) => Seq[String](
@@ -18,7 +31,13 @@ scalacOptions in (Compile, doc) <++= baseDirectory.map {
   )
 }
 
-javacOptions ++= Seq("-Xlint:deprecation", "-Xlint:unchecked", "-source", "1.7", "-target", "1.7", "-g:vars")
+javacOptions ++= Seq(
+  "-Xlint:deprecation", 
+  "-Xlint:unchecked", 
+  "-source", "1.7", 
+  "-target", "1.7", 
+  "-g:vars"
+)
 
 resolvers ++= Seq(
   "Lightbend Releases" at "http://repo.typesafe.com/typesafe/releases"
@@ -46,3 +65,4 @@ initialCommands in console := """
 cancelable := true
 
 sublimeTransitive := true
+
