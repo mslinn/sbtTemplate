@@ -1,11 +1,8 @@
-// If you use JDK 6 and not JDK 7 then replace all three instances of the number 7 to the number 6
-// If you use JDK 8 and not JDK 7 then replace all three instances of the number 7 to the number 8
-
 organization := "com.micronautics"
 
 name := "change-me"
 
-version := "0.1.5"
+version := "0.1.6"
 
 scalaVersion := "2.11.8"
 
@@ -13,7 +10,7 @@ scalacOptions ++= Seq(
   "-deprecation", 
   "-encoding", "UTF-8", 
   "-feature", 
-  "-target:jvm-1.7", 
+  "-target:jvm-1.8", 
   "-unchecked",
   "-Ywarn-adapted-args",
   "-Ywarn-dead-code",
@@ -24,18 +21,18 @@ scalacOptions ++= Seq(
   "-Xlint"
 )
 
-scalacOptions in (Compile, doc) <++= baseDirectory.map {
+scalacOptions in (Compile, doc) ++= baseDirectory.map {
   (bd: File) => Seq[String](
      "-sourcepath", bd.getAbsolutePath,
      "-doc-source-url", "https://github.com/mslinn/changeMe/tree/master€{FILE_PATH}.scala"
   )
-}
+}.value
 
 javacOptions ++= Seq(
   "-Xlint:deprecation", 
   "-Xlint:unchecked", 
-  "-source", "1.7", 
-  "-target", "1.7", 
+  "-source", "1.8", 
+  "-target", "1.8", 
   "-g:vars"
 )
 
@@ -45,7 +42,7 @@ resolvers ++= Seq(
 
 libraryDependencies ++= Seq(
   //"com.github.nscala-time"  %% "nscala-time"   % "1.8.0" withSources(),
-  "org.scalatest"     %% "scalatest"   % "2.2.6" % "test" withSources(),
+  "org.scalatest"     %% "scalatest"   % "3.0.0" % "test" withSources(),
   "junit"             %  "junit"       % "4.12"  % "test"
 )
 
