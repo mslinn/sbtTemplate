@@ -4,13 +4,13 @@ name := "change-me"
 
 version := "0.1.6"
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.0"
 
 scalacOptions ++= Seq(
-  "-deprecation", 
-  "-encoding", "UTF-8", 
-  "-feature", 
-  "-target:jvm-1.8", 
+  "-deprecation",
+  "-encoding", "UTF-8",
+  "-feature",
+  "-target:jvm-1.8",
   "-unchecked",
   "-Ywarn-adapted-args",
   "-Ywarn-dead-code",
@@ -29,15 +29,14 @@ scalacOptions in (Compile, doc) ++= baseDirectory.map {
 }.value
 
 javacOptions ++= Seq(
-  "-Xlint:deprecation", 
-  "-Xlint:unchecked", 
-  "-source", "1.8", 
-  "-target", "1.8", 
+  "-Xlint:deprecation",
+  "-Xlint:unchecked",
+  "-source", "1.8",
+  "-target", "1.8",
   "-g:vars"
 )
 
 resolvers ++= Seq(
-  "Lightbend Releases" at "http://repo.typesafe.com/typesafe/releases"
 )
 
 libraryDependencies ++= Seq(
@@ -62,4 +61,3 @@ initialCommands in console := """
 cancelable := true
 
 sublimeTransitive := true
-
