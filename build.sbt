@@ -40,7 +40,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  //"com.github.nscala-time"  %% "nscala-time"   % "1.8.0" withSources(),
+  //"com.github.nscala-time"  %% "nscala-time"   % "2.14.0" withSources(),
   "org.scalatest"     %% "scalatest"   % "3.0.0" % "test" withSources(),
   "junit"             %  "junit"       % "4.12"  % "test"
 )
