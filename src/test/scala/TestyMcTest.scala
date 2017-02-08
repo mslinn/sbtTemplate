@@ -24,7 +24,7 @@ class TestyMcTest extends WordSpec with MustMatchers {
       """Thank you for your order.
         |You enrolled in the best course ever!
         |Go study and become successful.
-        |""".stripMargin
+        |""".stripMargin.replace(System.lineSeparator, "\n")
 
     "compare normally" in {
       string.length shouldBe 96
@@ -79,7 +79,7 @@ class TestyMcTest extends WordSpec with MustMatchers {
         """Thank you for your order.
           |You enrolled in the best course ever!
           |Go study and become successful.
-          |""".stripMargin
+          |""".stripMargin.replace(System.lineSeparator, "\n")
       string should (
         include("Thank you for your order") and
           include("You enrolled in")
