@@ -32,8 +32,15 @@ Make the bash script executable:
 
     $ chmod a+x /usr/local/bin/sbtTemplate
 
+To create a new SBT project, run the script.
+
+    $ sbtTemplate my-new-project
+
 ## Using GitHub? Try Hub!
-With `hub` and `sbtTemplate` you can create a new SBT project and a matching GitHub project with only two commands. The setup documented below will supply your GitHub username and password, and will only prompt your for your 2-factor-authentication (2FA) token each time you run it if you set up 2FA.
+With `hub` and `sbtTemplate` you can create a new SBT project and a matching GitHub project with only two commands.
+The setup documented below will supply your GitHub username and password,
+and will only prompt your for your 2-factor-authentication (2FA) token each time
+you run it if you set up your GitHub account to use 2FA.
 
 ### Install Hub
 Install Hub on Mac OS:
@@ -66,7 +73,7 @@ Create a new SBT project and create a new GitHub project, which `hub` automatica
     $ git create -d "Project description"
     two-factor authentication code: 881078
     Updating origin
-    created repository: mslinn/html-form-scala
+    created repository: mslinn/my-new-project
 
 Now check in the new project:
 
