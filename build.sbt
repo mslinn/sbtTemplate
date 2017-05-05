@@ -2,9 +2,9 @@ organization := "com.micronautics"
 
 name := "change-me"
 
-version := "0.1.6"
+version := "0.1.7"
 
-scalaVersion := "2.12.1"
+scalaVersion := "2.12.2"
 
 scalacOptions ++= Seq(
   "-deprecation",
