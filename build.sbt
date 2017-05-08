@@ -1,8 +1,8 @@
 organization := "com.micronautics"
 
-name := "change-me"
+name := "my-new-project" // TODO provide a short yet descriptive name
 
-version := "0.1.7"
+version := "1.0.1"
 
 scalaVersion := "2.12.2"
 
@@ -24,7 +24,7 @@ scalacOptions ++= Seq(
 scalacOptions in (Compile, doc) ++= baseDirectory.map {
   (bd: File) => Seq[String](
      "-sourcepath", bd.getAbsolutePath,
-     "-doc-source-url", "https://github.com/mslinn/changeMe/tree/master€{FILE_PATH}.scala"
+     "-doc-source-url", "https://github.com/mslinn/my-new-project/tree/master€{FILE_PATH}.scala" // TODO replace my-new-project with the name of your project
   )
 }.value
 
@@ -61,3 +61,13 @@ initialCommands in console := """
 cancelable := true
 
 sublimeTransitive := true
+
+// sbt-site settings
+enablePlugins(SiteScaladocPlugin)
+siteSourceDirectory := target.value / "api"
+publishSite
+
+// sbt-ghpages settings
+enablePlugins(GhpagesPlugin)
+// TODO replace my-new-project with the name of your project and replace yourGithubId with your GitHub id
+git.remoteRepo := "git@github.com:yourGithubId/my-new-project.git"

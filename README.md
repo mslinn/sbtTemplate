@@ -1,4 +1,4 @@
-# Scala Project Template #
+# Scala Project Template
 
 [![Build Status](https://travis-ci.org/mslinn/sbtTemplate.svg?branch=master)](https://travis-ci.org/mslinn/sbtTemplate)
 [![GitHub version](https://badge.fury.io/gh/mslinn%2FsbtTemplate.svg)](https://badge.fury.io/gh/mslinn%2FsbtTemplate)
@@ -36,13 +36,30 @@ To create a new SBT project, run the script.
 
     $ sbtTemplate my-new-project
 
-## Using GitHub? Try Hub!
+## Using GitHub?
+
+### GitHub Pages
+`sbtTemplate` sets up the GitHub pages branch for your new project.
+Before you can use it, edit `build.sbt` and change this line so your GitHub user id and project name are substituted 
+for the placeholders `yourGithubId` and `my-new-project`:
+
+    git.remoteRepo := "git@github.com:yourGithubId/my-new-project.git"
+    
+Now you can publish the Scaladoc for your project with this command:
+
+    sbt ";doc ;ghpagesPushSite"
+    
+The Scaladoc will be available at a URL of the form:
+
+    http://yourGithubId.github.io/my-new-project/latest/api/index.html
+
+### Try Hub!
 With `hub` and `sbtTemplate` you can create a new SBT project and a matching GitHub project with only two commands.
 The setup documented below will supply your GitHub username and password,
 and will only prompt your for your 2-factor-authentication (2FA) token each time
 you run it if you set up your GitHub account to use 2FA.
 
-### Install Hub
+#### Install Hub
 Install Hub on Mac OS:
 
     $ brew install hub
@@ -66,14 +83,14 @@ Reload `~/.bash_profile`
 
     $ source `~/.profile`
 
-### Using sbtTemplate with Hub
+#### Using sbtTemplate with Hub
 Create a new SBT project and create a new GitHub project, which `hub` automatically adds as a `git` `remote`:
 
-    $ sbtTemplate my-new-project
+    $ sbtTemplate bigBadProject
     $ git create -d "Project description"
     two-factor authentication code: 881078
     Updating origin
-    created repository: mslinn/my-new-project
+    created repository: mslinn/bigBadProject
 
 Now check in the new project:
 
