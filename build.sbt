@@ -24,7 +24,7 @@ scalacOptions ++= Seq(
 scalacOptions in (Compile, doc) ++= baseDirectory.map {
   (bd: File) => Seq[String](
      "-sourcepath", bd.getAbsolutePath,
-     "-doc-source-url", "https://github.com/mslinn/my-new-project/tree/master€{FILE_PATH}.scala" // TODO replace my-new-project with the name of your project
+     "-doc-source-url", "https://github.com/mslinn/{name.value}/tree/master€{FILE_PATH}.scala"
   )
 }.value
 
@@ -40,7 +40,6 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  //"com.github.nscala-time"  %% "nscala-time"   % "2.14.0" withSources(),
   "org.scalatest"     %% "scalatest"   % "3.0.1" % "test" withSources(),
   "junit"             %  "junit"       % "4.12"  % "test"
 )
@@ -61,13 +60,3 @@ initialCommands in console := """
 cancelable := true
 
 sublimeTransitive := true
-
-// sbt-site settings
-enablePlugins(SiteScaladocPlugin)
-siteSourceDirectory := target.value / "api"
-publishSite
-
-// sbt-ghpages settings
-enablePlugins(GhpagesPlugin)
-// TODO replace my-new-project with the name of your project and replace yourGithubId with your GitHub id
-git.remoteRepo := "git@github.com:yourGithubId/my-new-project.git"
