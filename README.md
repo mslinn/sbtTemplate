@@ -25,7 +25,12 @@ git clone https://github.com/mslinn/sbtTemplate.git "$DIR"
 cd "$DIR"
 rm -rf .git
 git init
-echo "Remember to edit README.md and build.sbt ASAP"
+echo "Please edit README.md, build.sbt and publish.sbt right away"
+echo "After you create the remote repository, type this:"
+echo "git branch --set-upstream-to=origin/master master"
+echo "git add -A"
+echo "git commit -m "Initial checkin""
+echo "git push"
 ```
 
 Make the bash script executable:
