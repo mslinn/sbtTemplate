@@ -13,6 +13,6 @@ addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.8.2")
 // See https://github.com/rtimush/sbt-updates
 addSbtPlugin("com.timushev.sbt" % "sbt-updates" % "0.3.1")
 
-// See http://www.scalatest.org/install
-resolvers += "Artima Maven Repository" at "http://repo.artima.com/releases"
-addSbtPlugin("com.artima.supersafe" % "sbtplugin" % "1.1.2")
+// See http://www.scalatest.org/install; does not work with Scala 2.12
+//resolvers += "Artima Maven Repository" at "http://repo.artima.com/releases"
+//addSbtPlugin("com.artima.supersafe" % "sbtplugin" % "1.1.2")
