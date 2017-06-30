@@ -27,7 +27,7 @@ rm -rf .git
 git init
 echo "Please edit README.md, build.sbt and publish.sbt right away"
 echo "After you create the remote repository, type this:"
-echo "git branch --set-upstream-to=origin/master master"
+echo "git branch -u origin/master"
 echo "git add -A"
 echo "git commit -m "Initial checkin""
 echo "git push"
