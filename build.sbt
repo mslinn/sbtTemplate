@@ -2,9 +2,9 @@ organization := "com.micronautics"
 
 name := "my-new-project" // TODO provide a short yet descriptive name
 
-version := "1.0.2"
+version := "0.1.0"
 
-scalaVersion := "2.12.2"
+scalaVersion := "2.12.3"
 
 scalacOptions ++= Seq(
   "-deprecation",
