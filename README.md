@@ -1,5 +1,6 @@
 # Scala Project Template
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Build Status](https://travis-ci.org/mslinn/sbtTemplate.svg?branch=master)](https://travis-ci.org/mslinn/sbtTemplate)
 [![GitHub version](https://badge.fury.io/gh/mslinn%2FsbtTemplate.svg)](https://badge.fury.io/gh/mslinn%2FsbtTemplate)
 
@@ -45,15 +46,15 @@ To create a new SBT project, run the script.
 
 ### GitHub Pages
 `sbtTemplate` sets up the GitHub pages branch for your new project.
-Before you can use it, edit `build.sbt` and change this line so your GitHub user id and project name are substituted 
+Before you can use it, edit `build.sbt` and change this line so your GitHub user id and project name are substituted
 for the placeholders `yourGithubId` and `my-new-project`:
 
     git.remoteRepo := "git@github.com:yourGithubId/my-new-project.git"
-    
+
 Now you can publish the Scaladoc for your project with this command:
 
     sbt ";doc ;ghpagesPushSite"
-    
+
 The Scaladoc will be available at a URL of the form:
 
     http://yourGithubId.github.io/my-new-project/latest/api/index.html
