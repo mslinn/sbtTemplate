@@ -107,12 +107,12 @@ The `bin/run` Bash script assembles this project into a fat jar and runs it.
 Sample usage, which runs the `Hello` entry point in `src/main/scala/Hello.scala`:
 
 ```
-# bin/run Hello
+$ bin/run Hello
 ```
 
 The `-j` option forces a rebuild of the fat jar. 
 Use it after modifying the source code.
 
 ```
-# bin/run -j Hello
+$ bin/run -j Hello
 ```
