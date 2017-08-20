@@ -101,3 +101,18 @@ Create a new SBT project and create a new GitHub project, which `hub` automatica
 Now check in the new project:
 
     $ git add -A && git commit -m "Initial checkin" && git push -u origin master
+
+## Running the Program
+The `bin/run` Bash script assembles this project into a fat jar and runs it.
+Sample usage, which runs the `Hello` entry point in `src/main/scala/Hello.scala`:
+
+```
+# bin/run Hello
+```
+
+The `-j` option forces a rebuild of the fat jar. 
+Use it after modifying the source code.
+
+```
+# bin/run -j Hello
+```

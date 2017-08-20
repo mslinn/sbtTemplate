@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+# Sample usage:
+# bin/run -j Hello
+#
+# -j option forces rebuild of jar
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.."
+cd "$DIR"
+
+# Scan build.sbt for Scala version and program version
+
+SCALA_VERSION() {
+  V=`grep "scalaVersion :=" build.sbt |  cut -d' ' -f 3 | tr -d \"`
+   case $V in
+    2.10.*) echo 2.10 ;;
+    2.11.*) echo 2.11 ;;
+    2.12.*) echo 2.12 ;;
+    2.13.*) echo 2.13 ;;
+     3.0.*)  echo 3.0 ;;
+     3.1.*)  echo 3.1 ;;
+         *) echo UNKNOWN ;;
+  esac
+}
+
+NAME="$( grep "name :=" build.sbt | cut -d' ' -f 3 | tr -d \" )-assembly"
+VERSION="$( grep "version :=" build.sbt | cut -d' ' -f 3 | tr -d \" )"
+JAR=target/scala-`SCALA_VERSION`/$NAME-$VERSION.jar
+#echo $JAR
+
+if [ "$1" == -j ] || [ ! -f $JAR ]; then
+  echo "Building $JAR"
+  sbt assembly
+
+  if [ "$1" == -j ]; then shift; fi
+fi
+
+java -cp "$JAR" $1 "$@"
