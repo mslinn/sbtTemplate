@@ -1,14 +1,18 @@
 #!/usr/bin/env bash
 
 # Sample usage:
-# bin/run -j Hello
+# bin/run -j [entryPoint]
 #
 # -j option forces rebuild of jar
+# entryPoint defaults to "Hello"
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.."
 cd "$DIR"
 
-# Scan build.sbt for Scala version and program version
+# Scan build.sbt for program name, Scala version and program version
+function findValue {
+  echo "$( grep "$1 :=" build.sbt | cut -d' ' -f 3 | tr -d \" )"
+}
 
 SCALA_VERSION() {
   V=`grep "scalaVersion :=" build.sbt |  cut -d' ' -f 3 | tr -d \"`
@@ -23,10 +27,9 @@ SCALA_VERSION() {
   esac
 }
 
-NAME="$( grep "name :=" build.sbt | cut -d' ' -f 3 | tr -d \" )-assembly"
-VERSION="$( grep "version :=" build.sbt | cut -d' ' -f 3 | tr -d \" )"
-JAR=target/scala-`SCALA_VERSION`/$NAME-$VERSION.jar
-#echo $JAR
+NAME="$( findValue name )"
+VERSION="$( findValue version )"
+JAR=target/scala-`SCALA_VERSION`/$NAME-assembly-$VERSION.jar
 
 if [ "$1" == -j ] || [ ! -f $JAR ]; then
   echo "Building $JAR"
@@ -35,4 +38,10 @@ if [ "$1" == -j ] || [ ! -f $JAR ]; then
   if [ "$1" == -j ]; then shift; fi
 fi
 
-java -cp "$JAR" $1 "$@"
+if [ "$1" ]; then
+  ENTRY="$1"
+else
+  ENTRY=Hello
+fi
+
+java -cp "$JAR" $ENTRY "$@"
