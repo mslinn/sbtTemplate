@@ -44,4 +44,4 @@ else
   ENTRY=Hello
 fi
 
-java -cp "$JAR" $ENTRY "$@"
+java -cp "$JAR" "$ENTRY" "$@"
