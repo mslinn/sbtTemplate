@@ -6,6 +6,9 @@ version := "0.1.0"
 
 scalaVersion := "2.12.4"
 
+// If you want to apply a license, such as the Apache 2 license, uncomment the following:
+licenses += ("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0.html"))
+
 scalacOptions ++= Seq(
   "-deprecation",
   "-encoding", "UTF-8",
