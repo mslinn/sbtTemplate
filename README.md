@@ -8,7 +8,11 @@ This is a handy starting point for Scala/Java console apps built with SBT.
 Projects are built with Scala 2.12, which requires Java 8+.
 The `scala_2_11` branch builds projects for Scala 2.11.
 
-For more information about this project, and SBT, see the [SBT Project Setup lecture](https://scalacourses.com/student/showLecture/135) on [ScalaCourses.com](https://www.ScalaCourses.com).
+This project is licensed with CC0, which puts this project into the public domain.
+Please delete the `LICENSE` file for any projects you create based on this template project, 
+unless you want them to be in the public domain as well.
+
+For more information about this project and SBT, see the [SBT Project Setup lecture](https://scalacourses.com/student/showLecture/135) on [ScalaCourses.com](https://www.ScalaCourses.com).
 
 ## sbtTemplate Bash command
 
