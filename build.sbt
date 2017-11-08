@@ -62,8 +62,8 @@ scalacOptions in (Compile, console) --= Seq("-Ywarn-unused:imports", "-Xfatal-wa
 
 scalacOptions in (Compile, doc) ++= baseDirectory.map {
   (bd: File) => Seq[String](
-     "-sourcepath", bd.getAbsolutePath,
-     "-doc-source-url", s"https://github.com/mslinn/${ name.value }/tree/master€{FILE_PATH}.scala"
+     "-sourcepath", bd.getAbsolutePath, // todo replace my-new-project with the github project name
+     "-doc-source-url", "https://github.com/mslinn/my-new-project/tree/master€{FILE_PATH}.scala"
   )
 }.value
 
