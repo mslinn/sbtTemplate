@@ -1,5 +1,5 @@
 // See https://github.com/coursier/coursier#quick-start
-// Does not work with Windows Subystem for Linux:
+// Does not work with Windows Subsystem for Linux:
 // addSbtPlugin("io.get-coursier"                   % "sbt-coursier"         % "1.0.0")
 
 // See https://github.com/eed3si9n/sbt-assembly
