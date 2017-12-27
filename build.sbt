@@ -1,13 +1,48 @@
-organization := "com.micronautics"
+cancelable := true
 
-name := "my-new-project" // TODO provide a short yet descriptive name
+developers := List( // TODO replace this with your information
+  Developer("mslinn",
+            "Mike Slinn",
+            "mslinn@micronauticsresearch.com",
+            url("https://github.com/mslinn")
+  )
+)
 
-version := "0.1.0"
+// define the statements initially evaluated when entering 'console', 'console-quick', but not 'console-project'
+initialCommands in console := """
+                                |""".stripMargin
 
-scalaVersion := "2.12.4"
+javacOptions ++= Seq(
+  "-Xlint:deprecation",
+  "-Xlint:unchecked",
+  "-source", "1.8",
+  "-target", "1.8",
+  "-g:vars"
+)
+
+libraryDependencies ++= Seq(
+  "org.scalatest"     %% "scalatest"   % "3.0.3" % Test withSources(),
+  "junit"             %  "junit"       % "4.12"  % Test
+)
 
 // If you want to apply a license, such as the Apache 2 license, uncomment the following:
 licenses += ("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0.html"))
+
+logLevel := Level.Warn
+
+// Only show warnings and errors on the screen for compilations.
+// This applies to both test:compile and compile and is Info by default
+logLevel in compile := Level.Warn
+
+// Level.INFO is needed to see detailed output when running tests
+logLevel in test := Level.Info
+
+name := "my-new-project" // TODO provide a short yet descriptive name
+
+organization := "com.micronautics"
+
+resolvers ++= Seq(
+)
 
 scalacOptions ++= Seq( // From https://tpolecat.github.io/2017/04/25/scalac-flags.html
   "-deprecation",                      // Emit warning and location for usages of deprecated APIs.
@@ -67,35 +102,15 @@ scalacOptions in (Compile, doc) ++= baseDirectory.map {
   )
 }.value
 
-javacOptions ++= Seq(
-  "-Xlint:deprecation",
-  "-Xlint:unchecked",
-  "-source", "1.8",
-  "-target", "1.8",
-  "-g:vars"
+scalaVersion := "2.12.4"
+
+scmInfo := Some(
+  ScmInfo(  // TODO replace mslinn with your github id
+    url(s"https://github.com/mslinn/$name"),
+    s"git@github.com:mslinn/$name.git"
+  )
 )
-
-resolvers ++= Seq(
-)
-
-libraryDependencies ++= Seq(
-  "org.scalatest"     %% "scalatest"   % "3.0.3" % Test withSources(),
-  "junit"             %  "junit"       % "4.12"  % Test
-)
-
-logLevel := Level.Warn
-
-// Only show warnings and errors on the screen for compilations.
-// This applies to both test:compile and compile and is Info by default
-logLevel in compile := Level.Warn
-
-// Level.INFO is needed to see detailed output when running tests
-logLevel in test := Level.Info
-
-// define the statements initially evaluated when entering 'console', 'console-quick', but not 'console-project'
-initialCommands in console := """
-                                |""".stripMargin
-
-cancelable := true
 
 sublimeTransitive := true
+
+version := "0.1.0"
