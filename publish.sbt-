@@ -1,3 +1,4 @@
+import _root_.scala.sys.process._
 import Settings._
 
 // Uncomment and configure if publishing a library to bintray
