@@ -37,9 +37,9 @@ logLevel in compile := Level.Warn
 // Level.INFO is needed to see detailed output when running tests
 logLevel in test := Level.Info
 
-name := "my-new-project" // TODO provide a short yet descriptive name
+name := "sbt-template" // TODO provide a short yet descriptive name
 
-organization := "com.micronautics"
+organization := "com.micronautics" // TODO provide your organization's information
 
 resolvers ++= Seq(
 )
