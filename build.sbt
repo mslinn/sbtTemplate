@@ -28,6 +28,8 @@ libraryDependencies ++= Seq(
 // If you want to apply a license, such as the Apache 2 license, uncomment the following:
 licenses += ("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0.html"))
 
+logBuffered in Test := false
+
 logLevel := Level.Warn
 
 // Only show warnings and errors on the screen for compilations.
