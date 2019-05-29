@@ -9,13 +9,17 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.."
 cd "$DIR"
 
+function trim {
+  sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//'
+}
+
 # Scan build.sbt for program name, Scala version and program version
 function findValue {
-  echo "$( grep "$1 :=" build.sbt | cut -d' ' -f 3 | tr -d \" )"
+  echo "$( grep "$1 :=" build.sbt | cut -d' ' -f 3 | tr -d \" | trim )"
 }
 
 SCALA_VERSION() {
-  V=`grep "scalaVersion :=" build.sbt |  cut -d' ' -f 3 | tr -d \"`
+  V=`grep -E "^scalaVersion[[:space:]]+:=" build.sbt |  cut -d' ' -f 3 | tr -d \"`
    case $V in
     2.10.*) echo 2.10 ;;
     2.11.*) echo 2.11 ;;
