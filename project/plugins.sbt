@@ -1,8 +1,5 @@
-// See https://github.com/coursier/coursier#quick-start
-addSbtPlugin("io.get-coursier"                   % "sbt-coursier"         % "1.0.3")
-
 // See https://github.com/eed3si9n/sbt-assembly
-addSbtPlugin("com.eed3si9n"                      % "sbt-assembly"         % "0.14.5")
+addSbtPlugin("com.eed3si9n"                      % "sbt-assembly"         % "0.14.9")
 
 // See https://github.com/sbt/sbt-bintray
 addSbtPlugin("org.foundweekends"                 % "sbt-bintray"          % "0.5.1")
@@ -17,7 +14,7 @@ addSbtPlugin("com.thoughtworks.sbt-api-mappings" % "sbt-api-mappings"     % "3.0
 addSbtPlugin("com.typesafe.sbteclipse"           % "sbteclipse-plugin"    % "5.2.4")
 
 // See http://www.scala-sbt.org/sbt-site/
-//addSbtPlugin("com.typesafe.sbt"                  % "sbt-site"             % "1.3.2")
+//addSbtPlugin("com.typesafe.sbt"                  % "sbt-site"             % "1.4.0")
 
 // See https://github.com/sbt/sbt-ghpages
 //addSbtPlugin("com.typesafe.sbt"                  % "sbt-ghpages"          % "0.6.3")
