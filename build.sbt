@@ -1,3 +1,5 @@
+import Settings._
+
 cancelable := true
 
 developers := List( // TODO replace this with your information
@@ -21,9 +23,9 @@ javacOptions ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "org.scalatest"     %% "scalatest"   % "3.1.0-SNAP9" % Test withSources(),
-  "junit"             %  "junit"       % "4.12"        % Test
-)
+  "org.scalatest"     %% "scalatest"   % "3.1.0-SNAP13" % Test withSources(),
+  "junit"             %  "junit"       % "4.12"         % Test
+) 
 
 // If you want to apply a license, such as the Apache 2 license, uncomment the following:
 licenses += ("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0.html"))
@@ -58,7 +60,7 @@ scalacOptions ++= Seq( // From https://tpolecat.github.io/2017/04/25/scalac-flag
   "-unchecked",                        // Enable additional warnings where generated code depends on assumptions.
   "-Xcheckinit",                       // Wrap field accessors to throw an exception on uninitialized access.
   //"-Xfatal-warnings",                  // Fail the compilation if there are any warnings.
-  "-Xfuture",                          // Turn on future language features.
+  //"-Xfuture",                          // Turn on future language features. No longer available as of Scala 2.13
   "-Xlint:adapted-args",               // Warn if an argument list is modified to match the receiver.
   "-Xlint:constant",                   // Evaluation of a constant arithmetic expression results in an error.
   "-Xlint:delayedinit-select",         // Selecting member of DelayedInit.
@@ -74,7 +76,7 @@ scalacOptions ++= Seq( // From https://tpolecat.github.io/2017/04/25/scalac-flag
   "-Xlint:private-shadow",             // A private field (or class parameter) shadows a superclass field.
   "-Xlint:stars-align",                // Pattern sequence wildcard must align with sequence component.
   "-Xlint:type-parameter-shadow",      // A local type parameter shadows a type already in scope.
-  "-Xlint:unsound-match"               // Pattern match may not be typesafe.
+  //"-Xlint:unsound-match"               // Pattern match may not be typesafe. No longer available as of Scala 2.13
 )
 
 scalacOptions ++=
@@ -114,13 +116,13 @@ scalacOptions in (Compile, doc) ++= baseDirectory.map {
   )
 }.value
 
-scalaVersion := "2.12.8"   // comment this line to use Scala 2.13-RC1
-//scalaVersion := "2.13.0-RC1" // uncomment this line to use Scala 2.13-RC1
+scalaVersion := "2.12.8"   // comment this line to use Scala 2.13
+//scalaVersion := "2.13.0" // uncomment this line to use Scala 2.13
 
 scmInfo := Some(
-  ScmInfo(  // TODO replace mslinn with your github id
-    url(s"https://github.com/mslinn/$name"),
-    s"git@github.com:mslinn/$name.git"
+  ScmInfo(
+    url(s"https://github.com/$gitHubId/$name"),
+    s"git@github.com:$gitHubId/$name.git"
   )
 )
 

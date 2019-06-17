@@ -1,5 +1,5 @@
 object Settings {
-  val gitHubId: String = try {
+  lazy val gitHubId: String = try {
         val hubConfigFilename = System.getProperty("user.home") + "/.config/hub"
         scala.io.Source.fromFile(new java.io.File(hubConfigFilename))
           .getLines
