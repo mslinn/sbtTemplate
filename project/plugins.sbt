@@ -1,5 +1,5 @@
 // See https://github.com/eed3si9n/sbt-assembly
-addSbtPlugin("com.eed3si9n"                      % "sbt-assembly"         % "0.14.9")
+addSbtPlugin("com.eed3si9n"                      % "sbt-assembly"         % "0.14.10")
 
 // See https://github.com/sbt/sbt-bintray
 addSbtPlugin("org.foundweekends"                 % "sbt-bintray"          % "0.5.1")
