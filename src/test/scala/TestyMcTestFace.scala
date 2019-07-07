@@ -1,8 +1,7 @@
 import org.scalatest.Matchers._
 import org.scalatest._
-import org.scalatest.wordspec.AnyWordSpec
 
-class TestyMcTestFace extends AnyWordSpec with MustMatchers {
+class TestyMcTestFace extends WordSpec with MustMatchers {
   "The 'Hello world' string" should {
     "contain 11 characters" in {
       "Hello world".length === 11
@@ -65,9 +64,9 @@ class TestyMcTestFace extends AnyWordSpec with MustMatchers {
     val either: Either[String, Int] = Right(3)
 
     "work for Right values" in {
-      either.right.value shouldBe 3
-      either shouldBe 'right
-      either should not be 'left
+      either.right.value shouldBe 3   // ScalaTest does not yet support either.value
+      either shouldBe Symbol("right")
+      either should not be Symbol("left")
     }
   }
 
