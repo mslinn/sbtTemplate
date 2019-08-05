@@ -106,8 +106,8 @@ scalacOptions in (Compile, doc) ++= baseDirectory.map {
   )
 }.value
 
-//scalaVersion := "2.12.8"   // comment this line to use Scala 2.13
-scalaVersion := "2.13.0" // uncomment this line to use Scala 2.13
+//scalaVersion := "2.12.9"   // comment this line to use Scala 2.13
+scalaVersion := "2.13.0" // uncomment this line to use Scala 2.12
 
 scmInfo := Some(
   ScmInfo(
