@@ -59,7 +59,6 @@ scalacOptions ++= Seq(
   "-language:implicitConversions",     // Allow definition of implicit functions called views
   "-unchecked",                        // Enable additional warnings where generated code depends on assumptions.
   "-Xcheckinit",                       // Wrap field accessors to throw an exception on uninitialized access.
-  //"-Xfatal-warnings",                  // Fail the compilation if there are any warnings.
   "-Xlint:adapted-args",               // Warn if an argument list is modified to match the receiver.
   "-Xlint:constant",                   // Evaluation of a constant arithmetic expression results in an error.
   "-Xlint:delayedinit-select",         // Selecting member of DelayedInit.
@@ -107,7 +106,7 @@ scalacOptions in (Compile, doc) ++= baseDirectory.map {
 }.value
 
 //scalaVersion := "2.12.10"   // comment this line to use Scala 2.13
-scalaVersion := "2.13.1" // uncomment this line to use Scala 2.12
+scalaVersion := "2.13.1" // comment this line to use Scala 2.12
 
 scmInfo := Some(
   ScmInfo(
