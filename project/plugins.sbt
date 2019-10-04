@@ -23,9 +23,6 @@ addSbtPlugin("com.orrsella"                      % "sbt-sublime"          % "1.1
 // See https://github.com/ThoughtWorksInc/sbt-api-mappings
 addSbtPlugin("com.thoughtworks.sbt-api-mappings" % "sbt-api-mappings"     % "3.0.0")
 
-// See https://github.com/typesafehub/sbteclipse
-//addSbtPlugin("com.typesafe.sbteclipse"           % "sbteclipse-plugin"    % "5.2.4")
-
 // See http://www.scala-sbt.org/sbt-site/
 //addSbtPlugin("com.typesafe.sbt"                  % "sbt-site"             % "1.4.0")
 
