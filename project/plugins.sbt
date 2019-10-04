@@ -24,10 +24,10 @@ addSbtPlugin("com.orrsella"                      % "sbt-sublime"          % "1.1
 addSbtPlugin("com.thoughtworks.sbt-api-mappings" % "sbt-api-mappings"     % "3.0.0")
 
 // See http://www.scala-sbt.org/sbt-site/
-//addSbtPlugin("com.typesafe.sbt"                  % "sbt-site"             % "1.4.0")
+addSbtPlugin("com.typesafe.sbt"                  % "sbt-site"             % "1.4.0")
 
 // See https://github.com/sbt/sbt-ghpages
-//addSbtPlugin("com.typesafe.sbt"                  % "sbt-ghpages"          % "0.6.3")
+addSbtPlugin("com.typesafe.sbt"                  % "sbt-ghpages"          % "0.6.3")
 
 // See https://github.com/jrudolph/sbt-dependency-graph
 addSbtPlugin("net.virtual-void"                  % "sbt-dependency-graph" % "0.9.2")
