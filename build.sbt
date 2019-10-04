@@ -27,7 +27,7 @@ libraryDependencies ++= Seq(
   "junit"             %  "junit"       % "4.12"  % Test
 )
 
-licenses += ("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0.html"))
+licenses += ("CC0", url("https://creativecommons.org/publicdomain/zero/1.0/"))
 
 logBuffered in Test := false
 

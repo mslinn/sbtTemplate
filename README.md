@@ -4,7 +4,8 @@
 [![GitHub version](https://badge.fury.io/gh/mslinn%2FsbtTemplate.svg)](https://badge.fury.io/gh/mslinn%2FsbtTemplate)
 
 This is a handy starting point for Scala/Java console apps built with SBT.
-Projects are built with Scala 2.12, which requires Java 8+.
+Projects are built with Scala 2.13, and has been tested with Oracle Java 8, OpenJDK 8 & OpenJDK 11.
+Uncomment one line to build with Scala 2.12 instead.
 The `scala_2_11` branch builds projects for Scala 2.11.
 
 This project is licensed with CC0, which puts this project into the public domain.
