@@ -10,6 +10,12 @@
  * When using or citing the work, you should not imply endorsement by the author or the affirmer.
  *
  * The full legal text is here: https://creativecommons.org/publicdomain/zero/1.0/legalcode */
+ 
+// See https://www.scala-lang.org/2019/10/17/dependency-management.html#static-analysis-checks
+addSbtPlugin("ch.epfl.scala" % "sbt-missinglink" % "0.2.0")
+
+// See https://get-coursier.io/docs/sbt-coursier
+addSbtPlugin("io.get-coursier" % "sbt-coursier" % "2.0.0-RC4-1")
 
 // See https://github.com/eed3si9n/sbt-assembly
 addSbtPlugin("com.eed3si9n"                      % "sbt-assembly"         % "0.14.10")
@@ -24,7 +30,7 @@ addSbtPlugin("com.orrsella"                      % "sbt-sublime"          % "1.1
 addSbtPlugin("com.thoughtworks.sbt-api-mappings" % "sbt-api-mappings"     % "3.0.0")
 
 // See http://www.scala-sbt.org/sbt-site/
-addSbtPlugin("com.typesafe.sbt"                  % "sbt-site"             % "1.4.0")
+//addSbtPlugin("com.typesafe.sbt"                  % "sbt-site"             % "1.4.0")
 
 // See https://github.com/sbt/sbt-ghpages
 addSbtPlugin("com.typesafe.sbt"                  % "sbt-ghpages"          % "0.6.3")

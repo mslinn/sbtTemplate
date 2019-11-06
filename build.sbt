@@ -127,4 +127,6 @@ scmInfo := Some(
   )
 )
 
+versionReconciliation += "*" % "*" % "semver"
+
 version := "0.1.0"
