@@ -40,6 +40,8 @@ libraryDependencies ++= Seq(
   "junit"             %  "junit"       % "4.12"  % Test
 )
 
+Global / onChangedBuildSource := ReloadOnSourceChanges
+
 licenses += ("CC0", url("https://creativecommons.org/publicdomain/zero/1.0/"))
 
 logBuffered in Test := false
