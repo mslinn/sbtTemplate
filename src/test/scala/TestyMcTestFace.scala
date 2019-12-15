@@ -1,7 +1,10 @@
-import org.scalatest.Matchers._
+import matchers.should.Matchers._
 import org.scalatest._
+import org.scalatest.matchers
+import org.scalatest.matchers.must.Matchers
+import org.scalatest.wordspec.AnyWordSpec
 
-class TestyMcTestFace extends WordSpec with MustMatchers {
+class TestyMcTestFace extends AnyWordSpec with Matchers {
   "The 'Hello world' string" should {
     "contain 11 characters" in {
       "Hello world".length === 11
