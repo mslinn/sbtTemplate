@@ -1,6 +1,5 @@
-import matchers.should.Matchers._
 import org.scalatest._
-import org.scalatest.matchers
+import org.scalatest.matchers.should.Matchers._
 import org.scalatest.matchers.must.Matchers
 import org.scalatest.wordspec.AnyWordSpec
 
