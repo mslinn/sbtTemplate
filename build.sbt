@@ -130,3 +130,5 @@ scmInfo := Some(
 )
 
 version := "0.1.0"
+
+watchTriggeredMessage in ThisBuild := Watch.clearScreenOnTrigger
