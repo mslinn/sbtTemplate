@@ -15,7 +15,7 @@
 addSbtPlugin("com.eed3si9n"                      % "sbt-assembly"         % "0.15.0")
 
 // See https://github.com/sbt/sbt-bintray
-addSbtPlugin("org.foundweekends"                 % "sbt-bintray"          % "0.5.6")
+addSbtPlugin("org.foundweekends"                 % "sbt-bintray"          % "0.6.0")
 
 // See https://github.com/orrsella/sbt-sublime
 addSbtPlugin("com.orrsella"                      % "sbt-sublime"          % "1.1.2")
