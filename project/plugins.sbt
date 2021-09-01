@@ -12,7 +12,7 @@
  * The full legal text is here: https://creativecommons.org/publicdomain/zero/1.0/legalcode */
 
 // See https://github.com/eed3si9n/sbt-assembly
-addSbtPlugin("com.eed3si9n"                      % "sbt-assembly"         % "0.15.0")
+addSbtPlugin("com.eed3si9n"                      % "sbt-assembly"         % "1.1.0")
 
 // See https://github.com/sbt/sbt-bintray
 addSbtPlugin("org.foundweekends"                 % "sbt-bintray"          % "0.5.6")
