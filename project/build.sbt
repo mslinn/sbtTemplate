@@ -11,4 +11,4 @@
  *
  * The full legal text is here: https://creativecommons.org/publicdomain/zero/1.0/legalcode */
 
-libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.6"
