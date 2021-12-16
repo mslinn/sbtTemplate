@@ -13,11 +13,11 @@
 
 // Settings for sbt assembly
 
-test in assembly := {}
+(assembly / test) := {}
 
-mainClass in assembly := Some("com.micronautics.cad.Cad")
+(assembly / mainClass) := Some("com.micronautics.cad.Cad")
 
-assemblyMergeStrategy in assembly := {
+(assembly / assemblyMergeStrategy) := {
  case PathList("META-INF", xs @ _*) => MergeStrategy.discard
  case x => MergeStrategy.first
 }
