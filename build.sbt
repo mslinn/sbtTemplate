@@ -24,7 +24,7 @@ developers := List( // TODO replace this with your information
 )
 
 // define the statements initially evaluated when entering 'console', 'console-quick', but not 'console-project'
-initialCommands in console := """
+(console / initialCommands) := """
                                 |""".stripMargin
 
 javacOptions ++= Seq(
@@ -44,16 +44,16 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 
 licenses += ("CC0", url("https://creativecommons.org/publicdomain/zero/1.0/"))
 
-logBuffered in Test := false
+(Test / logBuffered) := false
 
 logLevel := Level.Warn
 
 // Only show warnings and errors on the screen for compilations.
 // This applies to both test:compile and compile and is Info by default
-logLevel in compile := Level.Warn
+(compile / logLevel) := Level.Warn
 
 // Level.INFO is needed to see detailed output when running tests
-logLevel in test := Level.Info
+(test / logLevel) := Level.Info
 
 name := "sbt-template" // TODO provide a short yet descriptive name
 
@@ -110,9 +110,9 @@ scalacOptions ++=
   }.value
 
 // The REPL can’t cope with -Ywarn-unused:imports or -Xfatal-warnings so turn them off for the console
-scalacOptions in (Compile, console) --= Seq("-Ywarn-unused:imports", "-Xfatal-warnings")
+(Compile / console / scalacOptions) --= Seq("-Ywarn-unused:imports", "-Xfatal-warnings")
 
-scalacOptions in (Compile, doc) ++= baseDirectory.map {
+(Compile / doc / scalacOptions) ++= baseDirectory.map {
   bd: File => Seq[String](
      "-sourcepath", bd.getAbsolutePath, // todo replace my-new-project with the github project name
      "-doc-source-url", s"https://github.com/$gitHubId/my-new-project/tree/master€{FILE_PATH}.scala"
@@ -131,4 +131,4 @@ scmInfo := Some(
 
 version := "0.1.0"
 
-watchTriggeredMessage in ThisBuild := Watch.clearScreenOnTrigger
+(ThisBuild / watchTriggeredMessage) := Watch.clearScreenOnTrigger
